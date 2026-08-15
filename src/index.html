@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Input Layout</title>
+    <link rel="stylesheet" href="styleCalc.css">
+</head>
+<body>
+    <!-- 3D модель -->
+    <section class="model-section">
+        <canvas class="canvas"></canvas>
+    </section>
+    <div class="fixed-bottom">
+        <div class="all-section">
+            <div class="header">
+                <!-- <h2>Обчислення</h2>-->
+                <h2 id="res">SCADA турбіни</h2>
+            </div>
+        <div class="svg-section">
+            <div class="svg-container">
+                <!-- SVG <div class="svg-background-section"></div>-->
+                <object data="/static/picture/scada_scheme.svg" type="image/svg+xml" class="svg-content"></object>
+        
+                <input type="number" class="svg-input" id="cut_out" placeholder="1 = відкрито, 0 = закрито"
+                    style=" top: 41%; left: 52%; " value="1" min="0" max="1">
+        
+                <input type="number" id="Vt_percent" class="svg-input" value="80" style=" top: 65%; left: 14%; " min="0"
+                    max="100" step="1">
+        
+                <input type="number" id="UP_percent" class="svg-input" value="20" style=" top: 29%; left: 45%; " min="0"
+                    max="100" step="1">
+                <input type="number" class="svg-input" style=" top: 61.5%; left: 75.5%; " id="t2" value="40" min="-273.15">
+                <input type="number" class="svg-input" style=" top: 64.5%; left: 75.5%; " id="G_sv" value="4500" min="0">
+                <input type="number" class="svg-input" style=" top: 90%; left: 49%;" id="Bypass_percent" value="0" min="0"
+                    max="100" step="1">
+        
+                <p class="svg-otput" style="top: 11%; left: 24.5%; " id="G0"> G0</p>
+                <p class="svg-otput" style="top: 8%; left: 24.5%; " id="p0">p0</p>
+                <p class="svg-otput" style="top: 5%; left: 24.5%; " id="t0">t0</p>
+        
+                <p class="svg-otput" style=" position: absolute; top: 47%; left: 19%; " id="t_tm">tтм</p>
+                <p class="svg-otput" style=" position: absolute; top: 55.5%; left: 26%; " id="N_tp">Nтп</p>
+                <p class="svg-otput" style=" position: absolute; top: 64%; left: 30%; " id="t1">t1</p>
+        
+        
+                <p class="svg-otput" style=" position: absolute; top: 61%; left: 37%; " id="G_psg2">Gпсг-2</p>
+                <p class="svg-otput" style=" position: absolute; top: 64%; left: 37%; " id="t_psg2">tпсг-2</p>
+                <p class="svg-otput" style=" position: absolute; top: 78%; left: 44.5%; " id="G_bypass">Gбайпас</p>
+        
+                <p class="svg-otput" style=" position: absolute; top: 58.5%; left: 52%; " id="pt">pt</p>
+                <p class="svg-otput" style=" position: absolute; top: 14%; left: 96.5%; " id="Ne">Ne</p>
+                <p class="svg-otput" style=" position: absolute; top: 53%; left: 8%; " id="Bt">Bт</p>
+            </div>
+            <!-- 
+            <div class="main-content">
+                Секція введення даних 
+                <div class="input-section">
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <label for="cut_out">Cut Out:</label>
+                            <input type="number" id="cut_out" placeholder="1 = відкрито, 0 = закрито" value="1" min="0" max="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="Vt_percent">V<sub>t</sub> %:</label>
+                            <input type="number" id="Vt_percent" value="80" min="0" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="UP_percent">UP %:</label>
+                            <input type="number" id="UP_percent" value="20" min="0" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="t2">Температура t<sub>2</sub> (°C):</label>
+                            <input type="number" id="t2" value="40" min="-273.15">
+                        </div>
+                        <div class="input-group">
+                            <label for="G_sv">G<sub>sv</sub> (м³/год):</label>
+                            <input type="number" id="G_sv" value="4500" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label for="Bypass_percent">Bypass %:</label>
+                            <input type="number" id="Bypass_percent" value="0" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                </div>
+                
+                Секція результатів 
+                <div class="output-section">
+
+                    <div id="results">
+                        <h3>Результати</h3>
+                        <p>Тут будуть відображатися результати після обчислень.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- Секція кнопок -->
+        <div class="button-section">
+            <button class="calculate-btn" onclick="calculate()">Розрахувати</button>
+            <button id="reset-btn">Скинути</button>
+            <button id="loadNewModel">Показ в розрізі</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" async src="module-calc.js"></script>
+</body>
+</html>

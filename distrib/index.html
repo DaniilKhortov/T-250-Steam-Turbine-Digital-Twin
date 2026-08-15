@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Input Layout</title>
+    <link rel="stylesheet" href="styleCalc.css">
+</head>
+<body>
+    <canvas class="canvas"></canvas>
+    <div class="fixed-bottom">
+        <div class="all-section">
+            <div class="header">
+                <h2>Обчислення</h2>
+                <h2 id="res">Результати</h2>
+            </div>
+            <div class="main-content">
+                <!-- Секція введення даних -->
+                <div class="input-section">
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <label for="cut_out">Cut Out:</label>
+                            <input type="number" id="cut_out" placeholder="1 = відкрито, 0 = закрито" value="1" min="0" max="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="Vt_percent">V<sub>t</sub> %:</label>
+                            <input type="number" id="Vt_percent" value="80" min="0" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="UP_percent">UP %:</label>
+                            <input type="number" id="UP_percent" value="20" min="0" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="t2">Температура t<sub>2</sub> (°C):</label>
+                            <input type="number" id="t2" value="40" min="-273.15">
+                        </div>
+                        <div class="input-group">
+                            <label for="G_sv">G<sub>sv</sub> (м³/год):</label>
+                            <input type="number" id="G_sv" value="4500" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label for="Bypass_percent">Bypass %:</label>
+                            <input type="number" id="Bypass_percent" value="0" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Секція результатів -->
+                <div class="output-section">
+
+                    <div id="results">
+                        <h3>Результати</h3>
+                        <p>Тут будуть відображатися результати після обчислень.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Секція кнопок -->
+        <div class="button-section">
+            <button class="calculate-btn" onclick="calculate()">Розрахувати</button>
+            <button class="reset-btn" id="reset-btn">Скинути</button>
+            <button id="loadNewModel">2-D проекція</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" async src="module-calc.js"></script>
+</body>
+</html>

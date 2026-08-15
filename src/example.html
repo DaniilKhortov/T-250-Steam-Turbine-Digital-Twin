@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розташування полів на зображенні</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        /* Контейнер для зображення */
+        .image-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+
+        /* Зображення */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Абсолютне позиціонування полів */
+        .field {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Поля в певних точках */
+        .field1 {
+            top: 100px;
+            left: 150px;
+        }
+
+        .field2 {
+            top: 300px;
+            left: 400px;
+        }
+
+        .field3 {
+            top: 450px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <!-- Зображення -->
+    <img src="turt.jpg" alt="Картинка">
+
+    <!-- Поля для введення -->
+    <input type="text" class="field field1" placeholder="Поле 1">
+    <input type="text" class="field field2" placeholder="Поле 2">
+    <input type="text" class="field field3" placeholder="Поле 3">
+</div>
+
+</body>
+</html>
