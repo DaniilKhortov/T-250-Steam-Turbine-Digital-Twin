@@ -40,7 +40,7 @@ The purpose of this project is to implement digital twin of T-250 steam turbine,
 ## About the Turbine
 The **T-250/300-240** is a heavy-duty, single-shaft, supercritical district heating steam turbine. Designed for large-scale Cogeneration (Combined Heat and Power - CHP) plants, it simultaneously generates high-capacity electricity and thermal energy for industrial and residential district heating.
 
-[T-250-image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Steam_turbine_T-250.jpg/1920px-Steam_turbine_T-250.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=thumbnail)
+![T-250-turbine-image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Steam_turbine_T-250.jpg/1920px-Steam_turbine_T-250.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=thumbnail)
 
 ### Key Specifications
 * **Type:** Cogeneration (CHP) Steam Turbine
@@ -65,6 +65,10 @@ Libraries:
 3D Modelling:
 * ![Sketch Up](https://img.shields.io/badge/SketchUp-%23005F9E.svg?style=for-the-badge&logo=sketchup&logoColor=white)
 
+Build Tool:
+* ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+
+
 ## Getting Started
 
 ### Installation
@@ -75,6 +79,11 @@ Libraries:
 2.Change the git remote (optional if you want to change your origin)
   ```sh
   git remote set-url origin https://github.com/DaniilKhortov/T-250-Steam-Turbine-Digital-Twin.git
+  ```
+### Additional tools
+1. (Webpack)[https://webpack.js.org/guides/installation/]
+  ```sh
+  npm install --save-dev webpack
   ```
 
 ### Application launch 
@@ -94,3 +103,19 @@ npm run lint
 ```bash
 npm run lint:fix
 ```
+
+## Usage
+(I asked AI to make a good advertisment, so please persieve this section as post-ironic joke)
+
+Explore the interactive digital twin of the T-250 steam turbine directly in your browser.
+
+### 3D Model
+* **Free Observation:** Click and drag to rotate the camera, scroll to zoom in and out, and freely observe the turbine from any angle.
+![Rolling T-250 3D Model](res/t250-3d-3.gif)
+
+* **Internal View:** Use the UI controls to toggle the outer casing transparency and inspect the internal rotor mechanics.
+![Flickering T-250 3D Model](res/t250-3d-4.gif)
+
+### SCADA Interface
+* **Toy SCADA:** Includes a simplified, interactive SCADA control panel simulation for monitoring turbine parameters.
+![Toy SCADA Interface](res/scada.PNG)
