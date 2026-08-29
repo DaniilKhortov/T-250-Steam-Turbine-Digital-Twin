@@ -109,7 +109,7 @@ npm run lint:fix
 ```
 
 ## Usage
-(I asked AI to make a good advertisment, so please persieve this section as post-ironic joke)
+(I asked AI to make a good advertisment, so please persieve this section as a post-ironic joke)
 
 Explore the interactive digital twin of the T-250 steam turbine directly in your browser.
 
