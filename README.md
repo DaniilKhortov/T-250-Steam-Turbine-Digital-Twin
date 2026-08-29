@@ -27,9 +27,13 @@
           <a href="#installation">Installation</a>
         </li>  
         <li>
+          <a href="#additional-tools">Additional Tools</a>
+        </li>  
+        <li>
           <a href="#application-launch">Application launch</a>
         </li>  
       </ul>
+      <li><a href="#usage">Usage</a></li>
     </li>   
   </ol>
 </details>
